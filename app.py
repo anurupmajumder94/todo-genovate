@@ -42,7 +42,7 @@ def update_todo(todo_id: int, completed: bool):
         if todo.id == todo_id:
             todo.completed = completed
             return todo
-    raise HTTPException(status_code=404, detail="Todo not found")
+    raise HTTPException(status_code=404, detail="Todo not found...")
 
 
 @app.delete("/todos/{todo_id}")
@@ -51,4 +51,4 @@ def delete_todo(todo_id: int):
         if todo.id == todo_id:
             todos.pop(i)
             return {"message": "Todo deleted"}
-    raise HTTPException(status_code=404, detail="Todo not found")
+    raise HTTPException(status_code=404, detail="Todo not found...")
